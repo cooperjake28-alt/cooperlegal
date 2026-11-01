@@ -32,19 +32,30 @@ form.querySelectorAll('[required]').forEach((field) =>
   })
 );
 
-// MOCK SUBMIT: shows the success state without sending anything.
-// When Web3Forms is set up, replace the timeout below with:
-//   const res = await fetch(form.action, { method: 'POST', body: new FormData(form) });
-//   if (!res.ok) { /* show an error */ return; }
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
   if (!validate()) return;
 
   const button = form.querySelector('button[type="submit"]');
+  const sendError = document.getElementById('form-error');
+  sendError.hidden = true;
   button.disabled = true;
   button.textContent = 'Sending…';
 
-  await new Promise((resolve) => setTimeout(resolve, 900));
+  try {
+    const res = await fetch(form.action, {
+      method: 'POST',
+      headers: { Accept: 'application/json' },
+      body: new FormData(form),
+    });
+    const data = await res.json();
+    if (!res.ok || !data.success) throw new Error(data.message || 'Send failed');
+  } catch (err) {
+    button.disabled = false;
+    button.textContent = 'Send message';
+    sendError.hidden = false;
+    return;
+  }
 
   form.hidden = true;
   success.hidden = false;
