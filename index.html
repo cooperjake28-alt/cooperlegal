@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Steven Z. Cooper Professional Corporation | Toronto Real Estate Lawyer</title>
+  <meta name="description" content="Steven Z. Cooper is a Toronto real estate lawyer with over 35 years of experience in purchases, sales, refinances, title transfers and private lending.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": "Steven Z. Cooper Professional Corporation",
+    "description": "Real estate law: purchases, sales, refinances, title transfers and private lending in Toronto and the GTA.",
+    "email": "steven@cooperlegal.ca",
+    "image": "headshot.png",
+    "telephone": "+1-416-225-7321",
+    "areaServed": "Greater Toronto Area",
+    "address": { "@type": "PostalAddress", "streetAddress": "5255 Yonge St", "addressLocality": "North York", "addressRegion": "ON", "postalCode": "M2N 6P4", "addressCountry": "CA" }
+  }
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand">
+        <span class="brand-name">Steven Z. Cooper</span>
+        <span class="brand-sub">Professional Corporation</span>
+      </a>
+      <div class="header-actions">
+        <a href="tel:+14162257321" class="header-phone">(416) 225-7321</a>
+        <a href="#contact" class="btn btn-small">Contact Us</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- Hero: everything except contact -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow">Real Estate Lawyer &middot; Toronto</p>
+          <h1>Steven Z. Cooper</h1>
+          <p class="lead">A Toronto-based real estate lawyer with more than 35 years of experience, practising exclusively in real estate law.</p>
+
+          <p class="list-label">Practice Areas</p>
+          <ul class="practice-list">
+            <li>Purchases</li>
+            <li>Sales</li>
+            <li>Refinances</li>
+            <li>Title Transfers</li>
+            <li>Private Lending</li>
+          </ul>
+        </div>
+
+        <div class="hero-photo">
+          <div class="photo-frame">
+            <div class="photo-clip">
+              <img src="headshot.png" alt="Steven Z. Cooper, real estate lawyer" width="500" height="500">
+            </div>
+          </div>
+          <div class="badge">
+            <span class="badge-number">35+</span>
+            <span class="badge-label">Years of Experience</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="#contact" class="scroll-cue">
+        <span>Contact Us</span>
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="container contact-inner">
+        <div class="contact-info">
+          <p class="eyebrow">Contact Us</p>
+          <h2>Get in Touch</h2>
+          <p>To discuss a real estate matter, send a message using the form, or contact the office by email or phone.</p>
+          <ul class="contact-list">
+            <li>
+              <span class="contact-label">Email</span>
+              <a href="mailto:steven@cooperlegal.ca">steven@cooperlegal.ca</a>
+            </li>
+            <li>
+              <span class="contact-label">Direct Line</span>
+              <a href="tel:+14162257321">(416) 225-7321</a>
+            </li>
+            <li>
+              <span class="contact-label">Office</span>
+              <span>5255 Yonge St<br>North York, ON M2N 6P4</span>
+            </li>
+          </ul>
+        </div>
+
+        <!--
+          Web3Forms setup: create an access key for steven@cooperlegal.ca at web3forms.com,
+          paste it into the access_key field below, then delete the mock handler in script.js.
+        -->
+        <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+          <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+          <input type="hidden" name="subject" value="New enquiry from cooperlegal.ca">
+          <input type="hidden" name="from_name" value="cooperlegal.ca">
+          <input type="checkbox" name="botcheck" class="hidden" tabindex="-1" autocomplete="off">
+
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+            <span class="error" aria-live="polite"></span>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+              <span class="error" aria-live="polite"></span>
+            </div>
+            <div class="field">
+              <label for="phone">Phone <span class="optional">(optional)</span></label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel">
+            </div>
+          </div>
+          <div class="field">
+            <label for="matter">What can we help with?</label>
+            <select id="matter" name="matter" required>
+              <option value="" selected disabled>Select one</option>
+              <option>Purchase</option>
+              <option>Sale</option>
+              <option>Refinance</option>
+              <option>Title Transfer</option>
+              <option>Private Lending</option>
+              <option>Other real estate matter</option>
+            </select>
+            <span class="error" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Property address, closing date, anything else we should know" required></textarea>
+            <span class="error" aria-live="polite"></span>
+          </div>
+          <button type="submit" class="btn btn-block">Send message</button>
+          <p class="form-note">Sending this form does not create a lawyer-client relationship. Please don't include confidential details until we've spoken.</p>
+        </form>
+
+        <div id="form-success" class="form-success" hidden>
+          <h3>Thank you.</h3>
+          <p>Your message has been sent. Steven will be in touch.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p><strong>Steven Z. Cooper Professional Corporation</strong><br>5255 Yonge St, North York, ON M2N 6P4 &middot; <a href="tel:+14162257321">(416) 225-7321</a></p>
+      <p class="small">&copy; <span id="year">2026</span> Steven Z. Cooper Professional Corporation</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
